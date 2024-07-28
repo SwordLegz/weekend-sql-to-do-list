@@ -1,0 +1,49 @@
+.header {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: violet;
+}
+
+/* #table-header {
+
+}
+
+.container-fluid {
+
+} */
+
+/* .buttonColumn{
+    font-family: 'Courier New', Courier, monospace;
+} */
+ 
+
+#submit-button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* .button-hover {
+    background-color: rgb(225, 73, 73);
+} */
+
+.btn-delete {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    border-color: black;
+    border-width: .15em;
+    
+}
+
+.btn-incomplete {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blue;
+    color: lavenderblush;
+    border-color: black;
+    border-width: .15em;
+}
+
+.btn-complete {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: green;
+    color: lavenderblush;
+    border-color: black;
+    border-width: .15em;
+}

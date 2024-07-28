@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
-
-const todos = require('./routes/todos.router.js');
-
 let PORT = process.env.PORT || 5001;
+const todos = require('./routes/todos.router.js');
 
 // Do not modify this!
 if (process.env.NODE_ENV == 'test') {
@@ -13,6 +11,7 @@ if (process.env.NODE_ENV == 'test') {
 app.use(express.static('./server/public'));
 app.use(express.json());
 
+// ROUTES
 app.use('/todos', todos);
 
 app.listen(PORT, () => {
