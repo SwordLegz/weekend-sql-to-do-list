@@ -1,28 +1,76 @@
+body{
+    background-color: rgb(27, 165, 149);
+    flex: auto;
+    max-width: 70%;
+    margin: auto;
+}
+
 .header {
     font-family: 'Courier New', Courier, monospace;
-    background-color: violet;
+    background-color: #9999CC;
+    text-align: center;
+    border: 20px;
+    color: black;
 }
 
-/* #table-header {
-
-}
-
-.container-fluid {
-
-} */
-
-/* .buttonColumn{
+/* INPUTS */
+#add-item {
     font-family: 'Courier New', Courier, monospace;
-} */
- 
+}
 
+#toDoFormText {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* TABLE */
+.table-header {
+    border: 20px;
+    color: black;
+    width: 10px;
+}
+
+.completed{
+    background-color: #62e2b1;
+    color: 080808;
+}
+
+.thead {
+    font-family: 'Courier New', Courier, monospace;
+    border: 3px solid;
+    background-color: #CC9999;
+}
+
+#toDoListTable {
+    font-family: 'Courier New', Courier, monospace;
+    border: 3px solid;
+    background-color:#42b8ee;
+}
+
+th {
+    font-family: 'Courier New', Courier, monospace;
+    border: 3px solid;
+    text-align: center;
+    font-size: 20px;
+    height: 70px;
+}
+
+#completedStatus {
+    width: 11.17em;
+}
+
+#itemToDo {
+    width: 30em;
+}
+
+tr, td {
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid;
+}
+
+/* BUTTONS */
 #submit-button {
     font-family: 'Courier New', Courier, monospace;
 }
-
-/* .button-hover {
-    background-color: rgb(225, 73, 73);
-} */
 
 .btn-delete {
     font-family: 'Courier New', Courier, monospace;
@@ -32,7 +80,7 @@
     
 }
 
-.btn-incomplete {
+.btn-incompleted {
     font-family: 'Courier New', Courier, monospace;
     background-color: blue;
     color: lavenderblush;
@@ -40,9 +88,33 @@
     border-width: .15em;
 }
 
-.btn-complete {
+.btn-completed {
     font-family: 'Courier New', Courier, monospace;
     background-color: green;
+    color: lavenderblush;
+    border-color: black;
+    border-width: .15em;
+}
+
+/* BUTTON HOVERS */
+.btn-delete:hover {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(247, 102, 102);
+    border-color: black;
+    border-width: .15em;
+    
+}
+.btn-incompleted:hover {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(87, 87, 241);
+    color: lavenderblush;
+    border-color: black;
+    border-width: .15em;
+}
+
+.btn-completed:hover {
+    font-family: 'Courier New', Courier, monospace;
+    background-color:   rgb(66, 184, 66);
     color: lavenderblush;
     border-color: black;
     border-width: .15em;

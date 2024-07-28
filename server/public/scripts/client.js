@@ -16,14 +16,14 @@ function getToDoItem() {
             document.getElementById(`toDoListTable`).innerHTML += `
             <tr data-testid="toDoItem" class="completed container">
             <td>${item.text}</td>
-            <td class="buttonColumn"><button data-testid="completeButton" class="btn btn-complete" onClick="toggleCompleted('complete', ${item.id})">Completed!</button>
+            <td><button data-testid="completeButton" class="btn btn-completed" onClick="toggleButton('completed', ${item.id})">Completed!</button>
             <button data-testid="deleteButton" class="btn btn-delete" onClick="deleteToDoItem(${item.id})">Delete</button></td>
             </tr>`
         } else{
             document.getElementById(`toDoListTable`).innerHTML += `
             <tr data-testid="toDoItem" class="incomplete container">
-            <td>${item.text}</td>
-            <td class="buttonColumn"><button data-testid="completeButton" class="btn btn-incomplete" onClick="toggleCompleted('incomplete', ${item.id})">Incomplete</button>
+            <td class="buttonRow1">${item.text}</td>
+            <td><button data-testid="completeButton" class="btn btn-incompleted" onClick="toggleButton('incomplete', ${item.id})">Incomplete</button>
             <button data-testid="deleteButton" class="btn btn-delete" onClick="deleteToDoItem(${item.id})">Delete</button></td>
             </tr>`
         }
@@ -34,9 +34,9 @@ function getToDoItem() {
 }
 
 // POST
-function postToDoForm(e) {
+function toDoForm(e) {
     e.preventDefault()
-    console.log(`postToDoForm recieved a request!`)
+    console.log(`toDoForm recieved a request!`)
     let itemToPost = document.getElementById(`toDoFormText`).value
     axios({
         method: `POST`,
@@ -52,7 +52,7 @@ function postToDoForm(e) {
 }
 
 //  PUT
-function toggleCompleted(status, itemId){
+function toggleButton(status, itemId){
     axios({
         method: 'PUT',
         url: `/todos`,
@@ -67,7 +67,7 @@ function toggleCompleted(status, itemId){
 
 // DELETE
 function deleteToDoItem(itemId){
-    // console.log(`DELETE item ${itemId}!`)
+    console.log(`DELETE item ${itemId}!`)
     Swal.fire({
         // position: "top-end",
         icon: "success",

@@ -14,15 +14,16 @@
   <header class="header">
     <h1>SQL TO-DO List</h1>
   </header>
-  <form onSubmit="postToDoForm(event)">
-    <label for="toDoFormText">Add a To-Do Item!</label>
+  <form onSubmit="toDoForm(event)">
+    <label id="add-item" form="toDoFormText">Add a To-Do Item!</label>
     <input data-testid="toDoTextInput" type="text" id="toDoFormText" placeholder="To-Do Item">
-    <button id="btn submit-button" data-testid="submitButton">Submit</button>
+    <button id="submit-button" data-testid="submitButton">Submit</button>
   </form>
+  <p></p>
   <table class="container-fluid">
-    <thead id="table-header">
-      <th>Item to do:</th>
-      <th>Completed Status:</th>
+    <thead class="thead">
+      <th id="itemToDo">Item to do:</th>
+      <th id="completedStatus">Completed Status:</th>
     </thead>
     <tbody id="toDoListTable">
     </tbody>
